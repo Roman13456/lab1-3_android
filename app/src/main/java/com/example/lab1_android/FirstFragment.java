@@ -1,5 +1,6 @@
 package com.example.lab1_android;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +17,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 
 public class FirstFragment extends Fragment {
 
     private SharedViewModel sharedViewModel;
     private String selectedLanguage = null;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,6 +64,7 @@ public class FirstFragment extends Fragment {
                 Toast.makeText(requireContext(), "Будь ласка, виберіть мову перед продовженням!", Toast.LENGTH_SHORT).show();
             } else {
                 sharedViewModel.setSelectedLanguage(selectedLanguage);
+                MainActivity.saveData(selectedLanguage, requireActivity());
                 requireActivity().getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fragment_container, new SecondFragment())

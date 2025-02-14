@@ -29,7 +29,7 @@ public class SecondFragment extends Fragment {
         if (selectedLanguage != null) {
             textSelectedLanguage.setText(getString(R.string.Label,selectedLanguage));
         } else {
-            textSelectedLanguage.setText("Обрана мова: ");
+            textSelectedLanguage.setText(R.string.language_wasn_t_chosen);
         }
 
         buttonCancel.setOnClickListener(v -> {
