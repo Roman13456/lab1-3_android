@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">lab1_android</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Label">Обрана мова: %s</string>
+    <string name="Label">Chosen language: %s</string>
+    <string name="SavedData">Saved language: %s</string>
+
+    <string name="empty_file">No data</string>
+    <string name="go_back_msg">go back</string>
+    <string name="load_from_file_btn">Load from file</string>
+    <string name="delete_contents">delete contents</string>
+    <string name="language_wasn_t_chosen">"Language wasn't chosen: "</string>
 </resources>
